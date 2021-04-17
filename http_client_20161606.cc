@@ -187,7 +187,6 @@ int main(int argc, char* argv[]){
 	
 	// Print status code
 	printf("%s\n", strtok(header, "\r\n"));
-	free(header);
 
 	// if content-length  not specified
 	if(!contentLengthSpecified){
@@ -217,7 +216,6 @@ int main(int argc, char* argv[]){
 	// Write data to the file
 	fprintf(fp, "%s", data);
 	printf("%d bytes written to 20161606.out\n", content_length);
-	free(data);
 
 	// close socket
 	close(sockfd);
